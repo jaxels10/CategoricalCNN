@@ -55,12 +55,12 @@ train_datagen = ImageDataGenerator(rescale = 1./255,
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
 
-training_set = train_datagen.flow_from_directory('../../files/images/dataset-resized/training_data',
+training_set = train_datagen.flow_from_directory('../images/dataset-resized/training_data',
                                                  target_size = (64, 64),
                                                  batch_size = 32,
                                                  class_mode = 'categorical')
 
-test_set = test_datagen.flow_from_directory('../../files/images/dataset-resized/test_data',
+test_set = test_datagen.flow_from_directory('../images/dataset-resized/test_data',
                                             target_size = (64, 64),
                                             batch_size = 32,
                                             class_mode = 'categorical')
